@@ -3,7 +3,7 @@ export const addItemToCart = (cartItems, itemToAdd) => {
 
     if(existingItem){
         return cartItems.map(item => (
-            item.id == existingItem.id ?
+            item.id === existingItem.id ?
             {...item, quantity: item.quantity + 1}
             : item
         ))
@@ -21,7 +21,7 @@ export const removeItem = (cartItems, itemToRemove) => {
 
     if(existingItem.quantity > 1){
         return cartItems.map(item => (
-            item.id == existingItem.id ?
+            item.id === existingItem.id ?
             {...item, quantity: item.quantity - 1}
             : item
         ))
